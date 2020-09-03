@@ -3,6 +3,7 @@
 // arguments and returns the largest of them. Use the
 // if-then-else construct available in JavaScript.
 // ---------------------
+
 function max(a, b) {
   if (a < b) {
     return b;
@@ -17,6 +18,7 @@ console.assert(max(-23, 12) === 12);
 // Define a function maxOfThree() that takes three
 // numbers as arguments and returns the largest of them.
 // ---------------------
+
 function maxOfThree(a, b, c) {
   if (b > (a, c)) {
     return b;
@@ -36,14 +38,15 @@ console.assert(maxOfThree(-12, 4, -5) === 4);
 // string of length 1) and returns true if it is a
 // vowel, false otherwise.
 // ---------------------
-function isVowel(vow) {
-  if (vow == "a") {
-    return true;
-  } else if (vow == "E") {
-    return true;
-  } else {
-    return false;
+
+function isVowel(letter) {
+  let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U", "0"];
+  for (let i = 0; i < vowels.length; i++) {
+    if (letter === vowels[i]) {
+      return true;
+    }
   }
+  return false;
 }
 
 console.assert(isVowel(0) === false);
@@ -61,6 +64,20 @@ console.assert(isVowel("2") === false);
 // the string "tothohisos isos fofunon".
 // ---------------------
 
+function rovarspraket(x) {
+  let newString = "";
+  const newLetters = x.toString();
+  for (i = 0; i < newLetters.length; i++) {
+    let currentLetter = newLetters.charAt(i);
+    if (isVowel(currentLetter)) {
+      newString = newString + currentLetter;
+    } else {
+      newString = newString + (currentLetter + "o" + currentLetter);
+    }
+  }
+  return newString;
+}
+
 console.assert(rovarspraket("a") === "a");
 console.assert(rovarspraket("b") === "bob");
 console.assert(rovarspraket("cat") === "cocatot");
@@ -72,6 +89,14 @@ console.assert(rovarspraket(0) === "0");
 // of a string. For example, reverse("jag testar") should
 // return the string "ratset gaj".
 // ---------------------
+
+function reverse(x) {
+  let newString = "";
+  for (i = x.length - 1; i >= 0; i--) {
+    newString += x[i];
+  }
+  return newString;
+}
 
 console.assert(reverse("books") === "skoob");
 console.assert(

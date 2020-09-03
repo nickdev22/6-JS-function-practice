@@ -30,6 +30,7 @@
 // Q1
 // Write a function called `sum` that takes two
 // parameters and returns the sum of those 2 numbers.
+
 function sum(a, b) {
   return a + b;
 }
@@ -41,6 +42,7 @@ console.assert(sum(-2, -57) === -59);
 // Q2
 // Write a function named `avg` that takes 3 parameters
 // and returns the average of those 3 numbers.
+
 function avg(a, b, c) {
   return (a + b + c) / 3;
 }
@@ -52,6 +54,7 @@ console.assert(avg(123, 234, 345) === 234);
 // Q3
 // Write a function called `getLength` that takes one
 // parameter (a string) and returns the length
+
 function getLength(str) {
   return str.length;
 }
@@ -65,6 +68,7 @@ console.assert(getLength("supercalifragilisticexpialidocious") === 34);
 // two parameters and returns `true` if the first
 // parameter is greater than the second. Otherwise
 // the function should return `false`.
+
 function greaterThan(a, b) {
   if (a > b) {
     return true;
@@ -82,6 +86,7 @@ console.assert(greaterThan(-234, 1) === false);
 // single parameter and returns a string that
 // is formated like "Hello, Name!" where *Name*
 // is the parameter that was passed in.
+
 function greet(name) {
   return "Hello, " + name + "!";
 }
@@ -100,6 +105,7 @@ console.assert(greet("Iron Man") === "Hello, Iron Man!");
 // strings. For example:
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
+
 function madlib(a, b, c, d) {
   return "The " + a + " brown " + b + " " + c + " over the " + d + ".";
 }
